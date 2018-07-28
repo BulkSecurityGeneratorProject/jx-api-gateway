@@ -57,6 +57,9 @@ pipeline {
             }
           }
           container('maven') {
+
+            sh "localedef -i en_US -f UTF-8 en_US.UTF-8"
+
             sh 'mvn -s ./.mvn/settings-custom.xml clean deploy'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
