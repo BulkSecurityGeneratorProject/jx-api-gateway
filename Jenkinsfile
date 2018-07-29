@@ -20,7 +20,6 @@ pipeline {
         steps {
           container('maven') {
             sh "mvn -s ./.mvn/settings-custom.xml versions:set -DnewVersion=$PREVIEW_VERSION"
-            sh "localedef -i en_US -f UTF-8 en_US.UTF-8"
             sh "mvn -s ./.mvn/settings-custom.xml install"
             sh 'export VERSION=$PREVIEW_VERSION && skaffold build -f skaffold.yaml'
 
@@ -58,7 +57,9 @@ pipeline {
           }
           container('maven') {
 
-            sh "localedef -i en_US -f UTF-8 en_US.UTF-8"
+            sh 'export LC_ALL=en_US.UTF-8'
+            sh 'export LANG=en_US.UTF-8'
+            sh 'export LANGUAGE=en_US.UTF-8'
 
             sh 'mvn -s ./.mvn/settings-custom.xml clean deploy'
 
