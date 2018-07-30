@@ -521,17 +521,7 @@
                             </excludes>
                         </configuration>
                     </execution>
-                    <execution>
-                        <id>without-cucumber</id>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <includes>
-                                <include>**/*Cucumber*.java</include>
-                            </includes>
-                        </configuration>
-                    </execution>
+
                 </executions>
                 <configuration>
                     <!-- Force alphabetical order to have a reproducible build -->
