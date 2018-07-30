@@ -4,7 +4,7 @@
 
     <groupId>com.cryptocurrencyservices.apigateway</groupId>
     <artifactId>jx-api-gateway</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.18</version>
     <packaging>war</packaging>
     <name>Jx Api Gateway</name>
 
