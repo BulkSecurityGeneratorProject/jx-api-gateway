@@ -41,7 +41,7 @@ spring:
         mongodb:
 #            uri: mongodb://localhost:27017
 #            uri: mongodb://gateway-db-mongodb.default.svc.cluster.local:27017
-            uri: mongodb://10.107.199.230:27017
+            uri: mongodb://minikube-easy:30017
             database: jxApiGateway
         elasticsearch:
             cluster-name:
