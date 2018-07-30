@@ -57,8 +57,6 @@ pipeline {
           }
           container('maven') {
 
-            sh 'ping gateway-db-mongodb.default.svc.cluster.local'
-
             sh 'mvn -s ./.mvn/settings-custom.xml -P dev clean deploy'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
