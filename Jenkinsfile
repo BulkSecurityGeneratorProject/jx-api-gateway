@@ -61,7 +61,7 @@ pipeline {
             sh 'export LANG=en_US.UTF-8'
             sh 'export LANGUAGE=en_US.UTF-8'
 
-            sh 'mvn -s ./.mvn/settings-custom.xml clean deploy'
+            sh 'mvn -s ./.mvn/settings-custom.xml -P dev clean deploy'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
 
