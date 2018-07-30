@@ -57,7 +57,7 @@ pipeline {
           }
           container('maven') {
 
-            sh 'mvn -s ./.mvn/settings-custom.xml -P dev clean deploy'
+            sh 'mvn -s ./.mvn/settings-custom.xml -P dev clean package'
 
             sh 'export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml'
 
