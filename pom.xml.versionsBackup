@@ -4,7 +4,7 @@
 
     <groupId>com.cryptocurrencyservices.apigateway</groupId>
     <artifactId>jx-api-gateway</artifactId>
-    <version>0.1.0</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Jx Api Gateway</name>
 
@@ -175,47 +175,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
-
-
-        <!--<dependency>-->
-            <!--<groupId>de.flapdoodle.embed</groupId>-->
-            <!--<artifactId>de.flapdoodle.embed.mongo</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>de.flapdoodle.embed</groupId>-->
-            <!--<artifactId>de.flapdoodle.embed.mongo</artifactId>-->
-            <!--<version>2.1.1</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-
-        <!--<dependency>-->
-            <!--<groupId>com.lordofthejars</groupId>-->
-            <!--<artifactId>nosqlunit-mongodb</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>cz.jirutka.spring</groupId>-->
-            <!--<artifactId>embedmongo-spring</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>de.flapdoodle.embed</groupId>-->
-            <!--<artifactId>de.flapdoodle.embed.mongo</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>com.github.fakemongo</groupId>-->
-            <!--<artifactId>fongo</artifactId>-->
-            <!--<version>1.5.8</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-
+        <dependency>
+            <groupId>de.flapdoodle.embed</groupId>
+            <artifactId>de.flapdoodle.embed.mongo</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>javax.cache</groupId>
             <artifactId>cache-api</artifactId>
@@ -536,10 +500,6 @@
                 <configuration>
                     <!-- Force alphabetical order to have a reproducible build -->
                     <runOrder>alphabetical</runOrder>
-
-                    <!--<forkCount>1</forkCount>-->
-                    <!--<reuseForks>false</reuseForks>-->
-
                 </configuration>
             </plugin>
             <plugin>
@@ -647,7 +607,7 @@
                 </executions>
             </plugin>
             <!-- jhipster-needle-maven-add-plugin -->
-
+        
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
