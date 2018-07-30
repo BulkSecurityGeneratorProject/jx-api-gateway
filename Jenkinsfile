@@ -57,9 +57,7 @@ pipeline {
           }
           container('maven') {
 
-            sh 'export LC_ALL=en_US.UTF-8'
-            sh 'export LANG=en_US.UTF-8'
-            sh 'export LANGUAGE=en_US.UTF-8'
+            sh 'ping gateway-db-mongodb.default.svc.cluster.local'
 
             sh 'mvn -s ./.mvn/settings-custom.xml -P dev clean deploy'
 
